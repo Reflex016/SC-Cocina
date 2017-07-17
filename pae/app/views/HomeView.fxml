@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pae.app.controllers.HomeController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="800.0" opacity="0.3" pickOnBounds="true">
+            <image>
+                <Image url="@../../utils/img/fondo1.jpg" />
+            </image>
+        </ImageView>
+    <Pane prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #388e3c;">
+         <children>
+              <Label layoutX="690.0" layoutY="15.0" text="Inicio" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="18.0" />
+                  </font>
+              </Label>
+              <JFXHamburger fx:id="menu" layoutX="10.0" layoutY="15.0" />
+              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="750.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../../utils/img/home.png" />
+                  </image>
+              </ImageView>
+         </children>
+      </Pane>
+        <Pane layoutX="44.0" layoutY="208.0" prefHeight="250.0" prefWidth="200.0" style="-fx-background-color: #388e3c;">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="50.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../utils/img/bread.png" />
+                    </image>
+                </ImageView>
+                <JFXButton fx:id="abastecerButton" buttonType="RAISED" layoutX="50.0" layoutY="197.0" onAction="#mostrarAbastecer" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" text="Abastecer" textAlignment="CENTER" textFill="#388e3c">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </JFXButton>
+            </children>
+            <effect>
+                <DropShadow blurType="ONE_PASS_BOX" />
+            </effect>
+        </Pane>
+        <Pane layoutX="297.0" layoutY="208.0" prefHeight="250.0" prefWidth="200.0" style="-fx-background-color: #388e3c;">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="51.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../utils/img/olla.png" />
+                    </image>
+                </ImageView>
+                <JFXButton fx:id="consumirButton" onAction="#mostrarConsumir" buttonType="RAISED" layoutX="50.0" layoutY="196.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" text="Consumir" textAlignment="CENTER" textFill="#388e3c">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </JFXButton>
+            </children>
+            <effect>
+                <DropShadow blurType="ONE_PASS_BOX" />
+            </effect>
+        </Pane>
+        <Pane layoutX="551.0" layoutY="208.0" prefHeight="250.0" prefWidth="200.0" style="-fx-background-color: #388e3c;">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="51.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../utils/img/refrigerator.png" />
+                    </image>
+                </ImageView>
+                <JFXButton fx:id="inventarioButton" onAction="#mostrarInventario" buttonType="RAISED" layoutX="50.0" layoutY="196.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" text="Inventario" textAlignment="CENTER" textFill="#388e3c">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </JFXButton>
+            </children>
+            <effect>
+                <DropShadow blurType="ONE_PASS_BOX" />
+            </effect>
+        </Pane>
+        <Label layoutY="580.0" prefHeight="20.0" prefWidth="800.0" style="-fx-background-color: #000000;" />
+        <Text fill="WHITE" fontSmoothingType="LCD" layoutX="610.0" layoutY="595.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Servicio Comunitario - UNEG 2017" textAlignment="RIGHT" />
+        <JFXDrawer fx:id="side" defaultDrawerSize="200.0" layoutY="50.0" prefHeight="550.0" prefWidth="10.0" />
+    </children>
+</Pane>

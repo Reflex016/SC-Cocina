@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pae.alimentos.controllers.InventarioController">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #388e3c;">
+         <children>
+              <Label layoutX="655.0" layoutY="15.0" text="Inventario" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="18.0" />
+                  </font>
+              </Label>
+              <JFXHamburger fx:id="menu" layoutX="10.0" layoutY="15.0" />
+              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="750.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../../utils/img/refrigerator.png" />
+                  </image>
+              </ImageView>
+         </children>
+      </Pane>
+      <JFXTabPane fx:id="pane" layoutY="50.0" prefHeight="530.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #e8f5e9;">
+                     <children>
+                        <JFXButton fx:id="eliminarButton" buttonType="RAISED" layoutX="541.0" layoutY="100.0" onAction="#deleteInsumo" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #388e3c;" text="Eliminar Insumo" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="327.0" layoutY="37.0" text="Inventario por Insumo" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="insumosComboBox" focusColor="#388e3c" layoutX="70.0" layoutY="100.0" prefHeight="25.0" prefWidth="200.0" />
+                        <JFXButton fx:id="inventarioButton" buttonType="RAISED" layoutX="325.0" layoutY="363.0" onAction="#showInventario" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #388e3c;" text="Ver Inventario" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="351.0" layoutY="110.0" text="Disponible:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="disponibleLabel" layoutX="430.0" layoutY="110.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                         <Label fx:id="tipoLabel" layoutX="467.0" layoutY="110.0">
+                             <font>
+                                 <Font name="System" size="14.0" />
+                             </font>
+                         </Label>
+                        <Line endX="800.0" layoutY="225.0" stroke="#388e3c" strokeWidth="3.0" />
+                        <Label layoutX="340.0" layoutY="279.0" text="Inventario General" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXSpinner fx:id="inventarioSpinner" layoutX="386.0" layoutY="314.0" startingAngle="0.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Reportes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #e8f5e9;">
+                     <children>
+                        <Label layoutX="372.0" layoutY="44.0" text="Reportes" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="reporteButton" buttonType="RAISED" layoutX="326.0" layoutY="244.0" onAction="#showReport" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #388e3c;" text="Generar Reporte" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXDatePicker fx:id="inicialDatePicker" defaultColor="#388e3c" layoutX="207.0" layoutY="134.0" promptText="Fecha Inicial" />
+                        <JFXDatePicker fx:id="finalDatePicker" defaultColor="#388e3c" layoutX="447.0" layoutY="135.0" promptText="Fecha Final" />
+                         <JFXSpinner fx:id="reporteSpinner" layoutX="386.0" layoutY="199.0" startingAngle="0.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </JFXTabPane>
+      <Label layoutY="580.0" prefHeight="20.0" prefWidth="800.0" style="-fx-background-color: #000000;" />
+        <Text fill="WHITE" fontSmoothingType="LCD" layoutX="610.0" layoutY="595.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Servicio Comunitario - UNEG 2017" textAlignment="RIGHT" />
+        <JFXDrawer fx:id="side" defaultDrawerSize="200.0" layoutY="50.0" prefHeight="550.0" prefWidth="10.0" />
+       <StackPane fx:id="stackPane" layoutX="225.0" layoutY="250.0" prefHeight="10.0" prefWidth="10.0" />
+   </children>
+</Pane>

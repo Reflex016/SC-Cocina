@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="200.0" stylesheets="@../../utils/css/menu.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pae.app.controllers.MenuController">
+   <children>
+      <Pane prefHeight="550.0" prefWidth="200.0" style="-fx-background-color: #424242;">
+         <children>
+            <JFXButton fx:id="homeButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" onAction="#mostrarHome" prefHeight="50.0" prefWidth="200.0" ripplerFill="WHITE" stylesheets="@../../utils/css/menu.css" text="         Inicio" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="abastecerButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutY="50.0" onAction="#mostrarAbastecer" prefHeight="50.0" prefWidth="200.0" stylesheets="@../../utils/css/menu.css" text="         Abastecer" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="consumirButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutY="100.0" onAction="#mostrarConsumir" prefHeight="50.0" prefWidth="200.0" stylesheets="@../../utils/css/menu.css" text="         Consumir" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="inventarioButton" onAction="#mostrarInventario" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutY="150.0" prefHeight="50.0" prefWidth="200.0" stylesheets="@../../utils/css/menu.css" text="         Inventario" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="perfilButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutY="200.0" onAction="#mostrarPerfil" prefHeight="50.0" prefWidth="200.0" stylesheets="@../../utils/css/menu.css" text="         Mi Perfil" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="ayudaButton" onAction="#mostrarAyuda" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutY="250.0" prefHeight="50.0" prefWidth="200.0" stylesheets="@../../utils/css/menu.css" text="         Ayuda" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="salirButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutY="300.0" onAction="#salir" prefHeight="50.0" prefWidth="200.0" stylesheets="@../../utils/css/menu.css" text="         Salir" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../utils/img/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="15.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../utils/img/bread.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="15.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../utils/img/olla.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="15.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../utils/img/refrigerator.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="15.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../utils/img/help.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="15.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../utils/img/logout.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nombreUsuarioLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="500.0" text="Nombre Usuario" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="15.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../utils/img/user-white.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</VBox>

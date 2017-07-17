@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pae.app.controllers.PerfilController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="800.0" opacity="0.5" pickOnBounds="true">
+            <image>
+                <Image url="@../../utils/img/fondo2.jpg" />
+            </image>
+        </ImageView>
+              <Pane prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #388e3c;">
+         <children>
+              <Label layoutX="670.0" layoutY="15.0" text="Mi Perfil" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="18.0" />
+                  </font>
+              </Label>
+              <JFXHamburger fx:id="menu" layoutX="10.0" layoutY="15.0" />
+              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="750.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../../utils/img/user-white.png" />
+                  </image>
+              </ImageView>
+         </children>
+      </Pane>
+        <Pane layoutY="50.0" prefHeight="280.0" prefWidth="800.0" style="-fx-background-color: #e8f5e9;">
+            <children>
+                <JFXButton fx:id="usuarioButton" layoutX="336.0" layoutY="218.0" onAction="#updateUser" style="-fx-background-color: #388e3c;" text="Guardar Cambios" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </JFXButton>
+                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="740.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../utils/img/user.png" />
+                    </image>
+                </ImageView>
+                <JFXTextField fx:id="nombreTextField" focusColor="#388e3c" labelFloat="true" layoutX="278.0" layoutY="81.0" prefHeight="30.0" prefWidth="250.0" promptText="Usuario">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </JFXTextField>
+                <JFXTextField fx:id="correoTextField" focusColor="#388e3c" labelFloat="true" layoutX="280.0" layoutY="148.0" prefHeight="30.0" prefWidth="250.0" promptText="Correo Electrónico">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </JFXTextField>
+            <Label layoutX="354.0" layoutY="34.0" text="Modificar Perfil">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="800.0" layoutY="280.0" stroke="#388e3c" strokeWidth="3.0" />
+            </children>
+        </Pane>
+      <Pane layoutY="330.0" prefHeight="250.0" prefWidth="800.0" style="-fx-background-color: #e8f5e9;">
+         <children>
+            <Label layoutX="333.0" layoutY="22.0" text="Modificar Contraseña">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="actualPasswordField" focusColor="#388e3c" labelFloat="true" layoutX="279.0" layoutY="68.0" prefHeight="30.0" prefWidth="250.0" promptText="Contraseña Actual">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="nuevaPasswordField" focusColor="#388e3c" labelFloat="true" layoutX="280.0" layoutY="133.0" prefHeight="30.0" prefWidth="250.0" promptText="Nueva Contraseña">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="contrasenaButton" layoutX="334.0" layoutY="205.0" onAction="#updatePassword" style="-fx-background-color: #388e3c;" text="Cambiar Contraseña" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="747.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../utils/img/key.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Label layoutY="580.0" prefHeight="20.0" prefWidth="800.0" style="-fx-background-color: #000000;" />
+        <Text fill="WHITE" fontSmoothingType="LCD" layoutX="610.0" layoutY="595.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Servicio Comunitario - UNEG 2017" textAlignment="RIGHT" />
+        <JFXDrawer fx:id="side" defaultDrawerSize="200.0" layoutY="50.0" prefHeight="550.0" prefWidth="10.0" />
+        <StackPane fx:id="stackPane" layoutX="225.0" layoutY="250.0" prefHeight="10.0" prefWidth="10.0" />
+    </children>
+</Pane>

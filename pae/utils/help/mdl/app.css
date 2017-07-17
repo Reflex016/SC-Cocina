@@ -1,0 +1,30 @@
+header {
+	background-color: #1b5e20 !important;
+}
+
+.mdl-layout__drawer {
+	background-color: #4caf50 !important;
+}
+
+.mdl-navigation__link {
+	color: white!important;
+}
+
+.mdl-navigation :hover {
+	color: black!important;
+}
+
+.mdl-layout-title {
+	color: white !important;
+	background-color: #1b5e20 !important;
+}
+.mdl-layout-title :hover {
+	background-color: white !important;
+	color: black!important;
+}
+
+body {
+
+  background-color: #e8f5e9 !important;
+  
+}
